@@ -1,0 +1,296 @@
+/* root variable */
+:root {
+  --clr-dark-blue: hsl(233, 26%, 24%);
+  --clr-lime-green: hsl(136, 65%, 51%);
+  --clr-bright-cyan: hsl(192, 70%, 51%);
+  --clr-neutral-700: hsl(233, 8%, 62%);
+  --clr-neutral-500: hsl(220, 16%, 96%);
+  --clr-neutral-200: hsl(0, 0%, 98%);
+  --clr-neutral-0: hsl(0, 0%, 100%);
+
+  --ff-base: "Public Sans", sans-serif;
+
+  --fw-lighter: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* general styling */
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1.125rem;
+}
+
+/* utilities */
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+p {
+  color: var(--clr-neutral-700);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  place-items: center;
+  font-size: 1.5rem;
+  padding: 0.7rem 2.5rem;
+  background: linear-gradient(
+    to right,
+    var(--clr-lime-green),
+    var(--clr-bright-cyan)
+  );
+  color: var(--clr-neutral-0);
+  border-radius: 3rem;
+  transition: background 0.5s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    to right,
+    var(--clr-bright-cyan),
+    var(--clr-lime-green)
+  );
+}
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: var(--clr-dark-blue);
+  font-weight: var(--fw-regular);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: var(--clr-dark-blue);
+  font-weight: var(--fw-regular);
+  text-align: center;
+}
+
+/* header start */
+.header-area {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  min-height: 3em;
+  align-items: center;
+}
+
+.navigation img {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  transform: scale(1.1);
+  transition: display 0.5s ease;
+}
+
+.navigation .close {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding: 2em;
+  position: absolute;
+  top: -600%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background: var(--clr-neutral-0);
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+  z-index: 100;
+}
+
+nav a {
+  transition: all 0.5s ease;
+}
+
+nav a:hover {
+  border-bottom: 0.25rem solid var(--clr-lime-green);
+}
+
+nav.transform {
+  top: 4em;
+}
+
+.request {
+  display: none;
+}
+/* header end */
+/* hero start */
+#hero {
+  background: url("./images/bg-intro-mobile.svg") no-repeat top/contain;
+  padding-bottom: 4rem;
+}
+.hero-area {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  overflow: hidden;
+}
+
+.hero-left {
+  text-align: center;
+  margin-top: -2rem;
+}
+.hero-title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  color: var(--clr-dark-blue);
+  padding-bottom: 1rem;
+  font-weight: var(--fw-bold);
+}
+
+.hero-left p {
+  padding-bottom: 2.5rem;
+}
+
+.hero-img {
+  position: relative;
+  top: -4em;
+}
+
+/* hero end */
+
+/* main start */
+/* service start */
+#service {
+  background-color: var(--clr-neutral-500);
+  padding: 3rem 0rem;
+}
+
+#service .title {
+  padding-bottom: 1.5rem;
+}
+
+#service p {
+  padding-bottom: 3rem;
+}
+
+.service-card img {
+  margin: 0 auto;
+}
+/* service end */
+/* article start */
+article {
+  padding: 3rem 0;
+  background: var(--clr-neutral-200);
+}
+
+article .title {
+  padding-bottom: 2rem;
+}
+
+.article-area .flex-group {
+  gap: 2rem;
+}
+
+.article-card {
+  background: var(--clr-neutral-0);
+  border-radius: 0.5rem;
+}
+
+.article-card p,
+.article-card .subtitle {
+  text-align: left;
+  padding: 0;
+}
+
+.article-card p {
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+.article-content {
+  padding: 1.5rem;
+}
+
+/* article end */
+/* main end */
