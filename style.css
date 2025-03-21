@@ -260,7 +260,7 @@ nav.transform {
 /* service end */
 /* article start */
 article {
-  padding: 3rem 0;
+  padding: 4rem 0;
   background: var(--clr-neutral-200);
 }
 
@@ -294,3 +294,39 @@ article .title {
 
 /* article end */
 /* main end */
+/* footer start */
+footer {
+  background-color: var(--clr-dark-blue);
+  padding: 2rem 0;
+}
+
+.footer-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-icon {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-menu a {
+  color: var(--clr-neutral-0);
+}
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* footer end */
